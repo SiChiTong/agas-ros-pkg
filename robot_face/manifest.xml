@@ -1,10 +1,10 @@
 <package>
   <description brief="RobotFace - Display your talking head on your robot.">
 
-     An application to display a talking head on your robot for human robot interaction.
+     This is an application to display a talking head on your robot for human robot interaction. It displays text and synchronized mouthmovements. It is also able to show emotions.
 
   </description>
-  <author>AGAS/agas@uni-koblenz.de, Julian Giesen/jgiesen@uni-koblenz.de, David Gossow</author>
+  <author>AGAS, Julian Giesen, David Gossow</author>
   <license>LGPLv3</license>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/robot_face</url>
