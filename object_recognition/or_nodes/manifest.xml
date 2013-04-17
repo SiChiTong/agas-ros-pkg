@@ -1,0 +1,31 @@
+<package>
+  <description brief="or_nodes">
+
+     or_nodes
+
+  </description>
+  <author>Viktor Seib</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/or_nodes</url>
+  <depend package="roscpp"/>
+  <depend package="sensor_msgs"/>
+  <depend package="opencv2"/>
+  <depend package="cv_bridge"/>
+  <depend package="std_msgs"/>
+  <depend package="image_transport"/>
+
+
+  <depend package="or_libs"/>
+  <depend package="or_msgs"/>
+  <depend package="String"/>
+  <depend package="VectorGraphics"/>
+  <depend package="robbie_architecture"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lModules"/>
+  </export>
+
+</package>
+
+

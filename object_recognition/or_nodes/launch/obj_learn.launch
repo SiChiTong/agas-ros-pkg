@@ -1,0 +1,6 @@
+<launch>
+  <rosparam command="load" file="$(find or_nodes)/config/params.yaml" />
+
+    <!-- Start the Object-Learning-Node -->
+  <node name="obj_learn" pkg="or_nodes" type="obj_learn"/>
+</launch>

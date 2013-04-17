@@ -1,0 +1,9 @@
+
+<drinks>
+
+	<ObjectRecognition>
+			<!-- Objects to load at startup -->
+			<value name="sLoadObjects" value="juice,tea,milk,water"/>
+	</ObjectRecognition>
+
+</drinks>

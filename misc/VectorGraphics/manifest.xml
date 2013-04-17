@@ -1,0 +1,20 @@
+<package>
+  <description brief="VectorGraphics">
+
+     VectorGraphics
+
+  </description>
+  <author>Viktor Seib</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/VectorGraphics</url>
+
+   <depend package="robbie_architecture"/>
+
+    <export>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lVectorGraphics"/>
+  </export>
+
+</package>
+
+

@@ -1,0 +1,18 @@
+<package>
+  <description brief="String">
+
+     String
+
+  </description>
+  <author>benedikt-j</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/String</url>
+
+  <export>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lString"/>
+  </export>
+
+</package>
+
+

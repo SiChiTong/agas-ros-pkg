@@ -1,0 +1,18 @@
+<package>
+  <description brief="or_msgs">
+
+     or_msgs
+
+  </description>
+  <author>Viktor Seib</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/or_msgs</url>
+
+	<depend package="roscpp"/>
+	<depend package="std_msgs" />
+    <depend package="sensor_msgs"/>
+
+</package>
+
+
