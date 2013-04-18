@@ -1,6 +1,6 @@
 <stack>
   <description brief="Object Recognition">Packages with libs and ROS nodes to provide object recognition based on hough-transform clustering of SURF</description>
-  <author>Viktor Seib</author>
+  <author>AGAS, Viktor Seib, David Gossow, Susanne Thierfelder</author>
   <license>BSD</license>  
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/obj_rec_surf</url>
