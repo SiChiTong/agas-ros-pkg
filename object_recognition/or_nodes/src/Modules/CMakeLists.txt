@@ -37,9 +37,8 @@ rosbuild_add_library(Modules ${Modules_SRC})
 
 target_link_libraries(Modules
 	ObjectRecognition
-	Serializer
 	Singleton
-        ImageHelpers
+    ImageHelpers
 	${OpenCV_LIBRARIES}
 	flann
 )
