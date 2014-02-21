@@ -1,0 +1,4 @@
+add_subdirectory(CoordinateConverter)
+add_subdirectory(ImageSources)
+add_subdirectory(PointOfInterest)
+add_subdirectory(Puma2)

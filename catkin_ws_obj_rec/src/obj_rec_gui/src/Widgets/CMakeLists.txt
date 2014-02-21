@@ -1,0 +1,5 @@
+add_subdirectory(GLImageWidget)
+add_subdirectory(ImageMessagesDisplay)
+add_subdirectory(ObjectRecognition)
+add_subdirectory(SensorDataDisplay)
+

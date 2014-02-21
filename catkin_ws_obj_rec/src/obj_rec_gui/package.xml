@@ -1,0 +1,46 @@
+<package>
+  <name>obj_rec_gui</name>
+  <description>commander interface</description>
+  <version>1.0.0</version>
+  <author>AGAS/agas@uni-koblenz.de</author>
+  <maintainer email="agas@uni-koblenz.de">AGAS</maintainer>
+  <license>LGPLv3</license>
+  <!--<logo>http://www.uni-koblenz-landau.de/koblenz/fb4/institute/icv/agpaulus/logo_institut.jpg</logo>-->
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>roscpp</run_depend>
+  <build_depend>genmsg</build_depend>
+  <build_depend>door_detection_messages</build_depend>
+  <run_depend>door_detection_messages</run_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>message_runtime</build_depend>
+  <run_depend>message_runtime</run_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>speech_rec_messages</build_depend>
+  <run_depend>speech_rec_messages</run_depend>
+  <run_depend>roslib</run_depend>
+  <build_depend>roslib</build_depend>
+  <run_depend>std_msgs</run_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <!-- 
+	<rosdep name="pulse"/>
+	<rosdep name="mbrola"/>
+	-->
+  <build_depend>libqt4-dev</build_depend>
+
+  <run_depend>or_libs</run_depend>
+  <build_depend>or_libs</build_depend>
+  <run_depend>or_nodes</run_depend>
+  <build_depend>or_nodes</build_depend>
+  <run_depend>or_msgs</run_depend>
+  <build_depend>or_msgs</build_depend>
+  <run_depend>rviz</run_depend>
+  <build_depend>rviz</build_depend>
+
+  <run_depend>ptu</run_depend>
+  <build_depend>ptu</build_depend>
+</package>
+
+

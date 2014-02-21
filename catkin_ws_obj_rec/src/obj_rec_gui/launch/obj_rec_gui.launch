@@ -1,0 +1,12 @@
+<launch>
+  <!-- Start homer gui -->
+  <node name="obj_rec_gui" pkg="obj_rec_gui" type="obj_rec_gui" output="screen"/>
+
+
+  <!-- Start the Object-Recognition-Node -->
+  <node name="obj_rec" pkg="or_nodes" type="obj_rec" output="screen"/>
+
+
+    <!-- Start the Object-Learning-Node -->
+  <node name="obj_learn" pkg="or_nodes" type="obj_learn" output="screen" />
+</launch>

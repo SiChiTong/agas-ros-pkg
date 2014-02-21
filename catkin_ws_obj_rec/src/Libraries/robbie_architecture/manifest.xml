@@ -1,0 +1,25 @@
+<package>
+  <description brief="robbie_architecture">
+
+     robbie_architecture
+
+  </description>
+  <author>Viktor Seib</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/robbie_architecture</url>
+  <depend package="roscpp"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lConfig"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lImageHelpers"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lMath"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lSingleton"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lStateMachine"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lThread"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lTinyXML"/>
+  </export>
+
+</package>
+
+

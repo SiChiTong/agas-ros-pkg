@@ -1,0 +1,2 @@
+add_subdirectory(ObjectLearningTab)
+add_subdirectory(ObjectRecognitionTab)

@@ -1,0 +1,213 @@
+/*******************************************************************************
+ *  KeyPoint.cpp
+ *
+ *  (C) 2007 AG Aktives Sehen <agas@uni-koblenz.de>
+ *           Universitaet Koblenz-Landau
+ *
+ *  Additional information:
+ *  $Id: $
+ *******************************************************************************/
+
+#include "KeyPoint.h"
+
+#include <string.h>
+#include <math.h>
+
+#include "../../Architecture/Tracer/Tracer.h"
+#include "../../Workers/Math/Math.h"
+#include "../../Workers/Math/vec2.h"
+
+#define THIS KeyPoint
+
+using namespace std;
+
+THIS::THIS ( float _x, float _y, float _scale, float _strength, int _sign, float _orientation, std::vector<double> _featureVector )
+{
+  x = _x;
+  y = _y;
+  scale = _scale;
+  strength = _strength;
+  sign = _sign;
+  orientation = _orientation;
+  featureVector = _featureVector;
+}
+
+THIS::THIS ( float _x, float _y, float _scale, float _strength, int _sign )
+{
+  x = _x;
+  y = _y;
+  scale = _scale;
+  strength = _strength;
+  sign = _sign;
+}
+
+THIS::THIS ( )
+{
+}
+
+THIS::~THIS()
+{
+}
+
+THIS::THIS ( const KeyPoint& other )
+{
+  operator= ( other );
+}
+
+THIS& THIS::operator= ( const KeyPoint & other )
+{
+  if ( this == &other )
+  {
+    return *this;
+  }
+
+  x = other.x;
+  y = other.y;
+  scale = other.scale;
+  strength = other.strength;
+  orientation = other.orientation;
+  sign = other.sign;
+  featureVector = other.featureVector;
+  subVectorLast = other.subVectorLast;
+  return *this;
+}
+
+void THIS::addDescriptor( vector<double> descriptor )
+{
+  if ( descriptor.size() == 0 )
+  {
+    return;
+  }
+
+  featureVector.reserve( featureVector.size() + descriptor.size() );
+
+  for ( unsigned i=0; i<descriptor.size(); i++ )
+  {
+    featureVector.push_back( descriptor[i] );
+  }
+
+//   store last index for this vector + 1
+  subVectorLast.push_back( featureVector.size() );
+}
+
+float THIS::squaredDistance ( const KeyPoint& other ) const
+{
+  if ( featureVector.size() != other.featureVector.size() )
+  {
+    return 99999;
+  }
+
+  float dist = 0;
+  for ( unsigned n = 0; n < featureVector.size(); n++ )
+  {
+    float diff  = featureVector[n] - other.featureVector[n];
+    dist += diff * diff;
+  }
+
+  return dist;
+}
+
+
+std::vector<Point2D> THIS::getBoundingBox() const
+{
+  std::vector<Point2D> boxVertices ( 5 );
+  float r = scale * 10.0 * sqrt ( 2 );
+  for ( int j = 0; j < 5; j++ )
+  {
+    float alpha = ( float ( j ) + 0.5 ) / 4.0 * 2.0 * M_PI + orientation;
+    boxVertices[j] = Point2D ( x + r * sin ( alpha ), y + r * cos ( alpha ) );
+  }
+  return boxVertices;
+}
+
+
+std::vector<Point2D> THIS::getCenterArrow() const
+{
+  std::vector<Point2D> arrowVertices ( 6 );
+  const float r1 = scale * 5.0;
+  const float r3 = r1 + 6.0;
+  const float width = 3.0;
+
+  Point2D position ( x, y );
+
+  arrowVertices[0] = position;
+  arrowVertices[1] = position + Point2D ( r1 * sin ( orientation ), r1 * cos ( orientation ) );
+  arrowVertices[2] = arrowVertices[1] + CVec2 ( width * sin ( orientation + ( M_PI / 2.0 ) ), width * cos ( orientation + ( M_PI / 2.0 ) ) );
+  arrowVertices[3] = position + Point2D ( r3 * sin ( orientation ), r3 * cos ( orientation ) );
+  arrowVertices[4] = arrowVertices[1] - CVec2 ( width * sin ( orientation + ( M_PI / 2.0 ) ), width * cos ( orientation + ( M_PI / 2.0 ) ) );
+  arrowVertices[5] = arrowVertices[1];
+
+  return arrowVertices;
+}
+
+
+// SERIALIZATION ///////////////////////////////////////////////////////
+
+void THIS::storer ( ExtendedOutStream& extStrm )
+{
+  extStrm << unsigned ( 10 );
+
+  extStrm << float ( x );
+  extStrm << float ( y );
+  extStrm << scale;
+  extStrm << strength;
+  extStrm << orientation;
+  extStrm << sign;
+  extStrm << unsigned(featureVector.size());
+
+  for ( unsigned i=0; i<featureVector.size(); i++ )
+  {
+    extStrm << float( featureVector[i] );
+  }
+}
+
+THIS::THIS ( ExtendedInStream& extStrm )
+{
+  unsigned version;
+  extStrm >> version;
+
+  extStrm >> x;
+  extStrm >> y;
+  extStrm >> scale;
+  extStrm >> strength;
+  extStrm >> orientation;
+  extStrm >> sign;
+  unsigned vectorLength;
+  extStrm >> vectorLength;
+
+  for ( unsigned i=0; i<vectorLength; i++ )
+  {
+    float v;
+    extStrm >> v;
+    featureVector[i] = v;
+  }
+}
+
+
+std::string THIS::toASCII()
+{
+  ostringstream s;
+  s << x << " " << y << " ";
+
+  //ellipse parameters:
+  //scale 1.2 corresponds to a filter size of 9x9
+//   float r = scale/1.2*4.5;
+  float r=scale*10;
+  float a = 1/(r*r);
+  float b = 0;
+  float c = a;
+
+  //TRACE_INFO( scale << " r " << r << " a " << a );
+
+
+  s << a << " " << b << " " << c << " ";
+
+  for ( unsigned i=0; i<featureVector.size(); i++ )
+  {
+    s << featureVector[i] << " ";
+  }
+
+  return s.str();
+}
+
+#undef THIS

@@ -1,0 +1,24 @@
+<package>
+  <description brief="or_libs">
+
+     or_libs
+
+  </description>
+  <author>Viktor Seib</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/or_libs</url>
+
+  <depend package="roscpp"/>
+  <depend package="robbie_architecture"/>
+
+  <export>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lConnectedComponentAnalyzer"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lKeyPointExtraction"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lObjectRecognition"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lParallelSurf"/>
+  </export>
+
+</package>
+
+

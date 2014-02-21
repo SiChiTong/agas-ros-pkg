@@ -1,0 +1,26 @@
+<package>
+  <name>robbie_architecture</name>
+  <version>1.0.0</version>
+  <description>
+     robbie_architecture
+  </description>
+  <author>Viktor Seib</author>
+  <maintainer email="vseib@uni-koblenz.de">vseib</maintainer>
+  <license>BSD</license>
+  <url>http://ros.org/wiki/robbie_architecture</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <run_depend>roscpp</run_depend>
+  <export>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lConfig"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lImageHelpers"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lMath"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lSingleton"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lStateMachine"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lThread"/>
+    <cpp cflags="-I${prefix}/src" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib -lTinyXML"/>
+  </export>
+
+</package>
+
+

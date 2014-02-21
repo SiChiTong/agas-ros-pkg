@@ -1,0 +1,135 @@
+This file contains information about the connected cameras.
+-----------------------------------------------------------
+
+
+
+Index|                              Identifier|               Model|              Vendor|              Serial|
+     |                                        |                    |                    |                    |
+    0|            SONY DFW-X710 v1.03A 2918447|     DFW-X710 v1.03A|                SONY|              918447|
+
+
+Index |               Identifiert |        Resolution |     BitPerPixel |
+      |                           |                   |                 |
+  0.0 |        YUV(4:2:2) 320x240 |        320 x  240 |              16 |
+  1.0 |        YUV(4:1:1) 640x480 |        640 x  480 |              12 |
+  2.0 |        YUV(4:2:2) 640x480 |        640 x  480 |              16 |
+  3.0 |           Y(Mono) 640x480 |        640 x  480 |               8 |
+  4.0 |        YUV(4:2:2) 800x600 |        800 x  600 |              16 |
+  5.0 |           Y(Mono) 800x600 |        800 x  600 |               8 |
+  6.0 |       YUV(4:2:2) 1024x768 |       1024 x  768 |              16 |
+  7.0 |          Y(Mono) 1024x768 |       1024 x  768 |               8 |
+
+index|               identifier|                 category| relations|           type|
+     |                         |                         |          |               |
+    0|               brightness|                 Exposure|         4|          range|
+    1|              strobe_mode|                   Device|         0|           menu|
+    2|          strobe_duration|                   Device|         0|          range|
+    3|             strobe_delay|                   Device|         0|          range|
+    4|          strobe_polarity|                   Device|         0|           menu|
+    5|            auto_exposure|                 Exposure|         0|          range|
+    6|                sharpness|                    Video|         0|          range|
+    7|       white_balance_mode|                    Color|         2|          flags|
+    8|          white_balance_u|                    Color|         1|          range|
+    9|          white_balance_v|                    Color|         1|          range|
+   10|                      hue|                    Color|         0|          range|
+   11|               saturation|                    Color|         0|          range|
+   12|                    gamma|                    Video|         1|          range|
+   13|                  shutter|                 Exposure|         4|          range|
+   14|                     gain|                 Exposure|         4|          range|
+   15|             trigger_mode|                    Video|         0|           menu|
+   16|                      pan|             Lens Control|         1|          range|
+   17|                     tilt|             Lens Control|         1|          range|
+   18|           optical_filter|                    Video|         0|          range|
+   19|               frame rate|                    Video|         0|     value list|
+   20|                 register|                    Video|         0|           data|
+   21|                  timeout|                   Device|         0|          range|
+   22|                     gpio|                   Device|         0|           data|
+
+
+
+
+
+
+
+
+Index|                              Identifier|               Model|              Vendor|              Serial|
+     |                                        |                    |                    |                    |
+    1|           SONY DFW-X700  v1.60D 2396156|    DFW-X700  v1.60D|                SONY|              396156|
+
+Index |               Identifiert |        Resolution |     BitPerPixel |
+      |                           |                   |                 |
+  0.0 |        YUV(4:2:2) 320x240 |        320 x  240 |              16 |
+  1.0 |        YUV(4:2:2) 640x480 |        640 x  480 |              16 |
+  2.0 |        YUV(4:2:2) 800x600 |        800 x  600 |              16 |
+  3.0 |       YUV(4:2:2) 1024x768 |       1024 x  768 |              16 |
+
+index|               identifier|                 category| relations|           type|
+     |                         |                         |          |               |
+    0|               brightness|                 Exposure|         4|          range|
+    1|              strobe_mode|                   Device|         0|           menu|
+    2|          strobe_duration|                   Device|         0|          range|
+    3|             strobe_delay|                   Device|         0|          range|
+    4|          strobe_polarity|                   Device|         0|           menu|
+    5|            auto_exposure|                 Exposure|         0|          range|
+    6|                sharpness|                    Video|         0|          range|
+    7|       white_balance_mode|                    Color|         2|          flags|
+    8|          white_balance_u|                    Color|         1|          range|
+    9|          white_balance_v|                    Color|         1|          range|
+   10|                      hue|                    Color|         0|          range|
+   11|               saturation|                    Color|         0|          range|
+   12|                    gamma|                    Video|         1|          range|
+   13|                  shutter|                 Exposure|         4|          range|
+   14|                     gain|                 Exposure|         4|          range|
+   15|             trigger_mode|                    Video|         0|           menu|
+   16|                      pan|             Lens Control|         1|          range|
+   17|                     tilt|             Lens Control|         1|          range|
+   18|           optical_filter|                    Video|         0|          range|
+   19|               frame rate|                    Video|         0|     value list|
+   20|                 register|                    Video|         0|           data|
+   21|                  timeout|                   Device|         0|          range|
+   22|                     gpio|                   Device|         0|           data|
+
+
+
+
+
+
+
+
+
+
+Index|                              Identifier|               Model|              Vendor|              Serial|
+     |                                        |                    |                    |                    |
+    0|             Unibrain Fire-i 1.2 9715894|          Fire-i 1.2|            Unibrain|               15894|
+
+
+Index |               Identifiert |        Resolution |     BitPerPixel |
+      |                           |                   |                 |
+  0.0 |        YUV(4:4:4) 160x120 |        160 x  120 |              24 |
+  1.0 |        YUV(4:2:2) 320x240 |        320 x  240 |              16 |
+  2.0 |        YUV(4:1:1) 640x480 |        640 x  480 |              12 |
+  3.0 |        YUV(4:2:2) 640x480 |        640 x  480 |              16 |
+  4.0 |               RGB 640x480 |        640 x  480 |              24 |
+  5.0 |           Y(Mono) 640x480 |        640 x  480 |               8 |
+
+index|               identifier|                 category| relations|           type|
+     |                         |                         |          |               |
+    0|               brightness|                 Exposure|         4|          range|
+    1|              strobe_mode|                   Device|         0|           menu|
+    2|          strobe_duration|                   Device|         0|          range|
+    3|             strobe_delay|                   Device|         0|          range|
+    4|          strobe_polarity|                   Device|         0|           menu|
+    5|            auto_exposure|                 Exposure|         0|          range|
+    6|                sharpness|                    Video|         0|          range|
+    7|       white_balance_mode|                    Color|         2|          flags|
+    8|          white_balance_u|                    Color|         1|          range|
+    9|          white_balance_v|                    Color|         1|          range|
+   10|               saturation|                    Color|         0|          range|
+   11|                    gamma|                    Video|         1|          range|
+   12|                  shutter|                 Exposure|         4|          range|
+   13|                     gain|                 Exposure|         4|          range|
+   14|               frame rate|                    Video|         0|     value list|
+   15|                 register|                    Video|         0|           data|
+   16|                  timeout|                   Device|         0|          range|
+   17|                     gpio|                   Device|         0|           data|
+

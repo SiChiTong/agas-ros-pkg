@@ -1,0 +1,7 @@
+<stack>
+  <description brief="Object Recognition">Packages with libs and ROS nodes to provide object recognition based on hough-transform clustering of SURF</description>
+  <author>Viktor Seib</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/object_recognition</url>
+</stack>

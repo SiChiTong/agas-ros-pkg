@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>gamepad_how_to.png</file>
+        <file>stock_media-play.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,7 @@
+
+OrObjectPropertiesM
+
+Message OrObjectPropertiesM was replaced by direct method call.
+Other classes in the framework that need this message:
+- GUI: ObjectList --> probably only for display
+- ORAutoLearningModule --> to automatically learn and add objects --> can be replaced by direct method call aswell
