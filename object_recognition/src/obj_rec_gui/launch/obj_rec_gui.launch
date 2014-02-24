@@ -2,6 +2,7 @@
   <!-- Start homer gui -->
   <node name="obj_rec_gui" pkg="obj_rec_gui" type="obj_rec_gui" output="screen"/>
 
+  <rosparam command="load" file="$(find or_nodes)/config/params.yaml" />
 
   <!-- Start the Object-Recognition-Node -->
   <node name="obj_rec" pkg="or_nodes" type="obj_rec" output="screen"/>
