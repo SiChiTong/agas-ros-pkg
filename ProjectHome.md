@@ -1,0 +1,1 @@
+This repository contains different ROS nodes developed by the [Active Vision Group (AGAS)](http://www.uni-koblenz-landau.de/koblenz/fb4/institute/icv/agpaulus) at the University of Koblenz-Landau
